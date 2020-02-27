@@ -111,6 +111,11 @@ body {
   background-size: cover;
   padding: 100px 50px;
 
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
   .title {
     background: black;
     font-size: 1.1rem;
@@ -164,6 +169,7 @@ box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.75);
     display: flex;
     position: relative;
     z-index: 3;
+    margin: 0 auto;
   }
 
   .info {
