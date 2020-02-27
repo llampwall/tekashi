@@ -1,0 +1,292 @@
+@import url( 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import "reset";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #19202a;
+}
+
+#top-section {
+  position: relative;
+  height: 100vh;
+
+  header {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+
+    .logo {
+      width: 50px;
+      img {
+        width: 100%;
+      }
+    }
+
+    nav {
+      align-self: center;
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 300;
+        padding: 0 10px;
+      }
+    }
+  }
+
+  .blur-background {
+    background-image: -webkit-linear-gradient(45deg, rgba(25,32,42,1) 0%,rgba(25,32,42,0.9) 24%,rgba(25,32,42,0.68) 43%,rgba(183,68,237,0.38) 68%,rgba(135,188,229,0.01) 99%,rgba(135,188,229,0) 100%), url("/img/69files/top.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    filter: blur(50px) saturate(130%);
+    position: absolute;
+    z-index: 1;
+  }
+
+  .floating-img {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    z-index: 2;
+
+    .tekashi-img {
+      width: 30%;
+      img {
+        width: 100%;
+        filter: contrast(130%);
+      }
+    }
+  }
+
+}
+
+.container {
+  max-width: 1400px;
+}
+
+#bio {
+  display: flex;
+  padding: 50px;
+  background: black;
+  position: relative;
+  z-index: 3;
+  padding: 100px 0;
+
+  .container {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  p {
+    width: 50%;
+    color: white;
+    line-height: 1.8;
+    font-size: .9rem;
+    padding: 0 50px;
+  }
+
+  .logo-centered {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+  }
+}
+
+
+#latest {
+  background: url("/img/69files/original.jpeg");
+  background-size: cover;
+  padding: 100px 50px;
+
+  .title {
+    background: black;
+    font-size: 1.1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    color: white;
+    margin-bottom: 50px;
+  }
+
+  .videos {
+    padding: 0 50px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 20px;
+    position: relative;
+    left: -20px;
+  }
+
+  .video {
+    border-radius: 4px;
+    overflow: hidden;
+    height: 300px;
+    -webkit-box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.75);
+  }
+
+}
+
+
+#music {
+  position: relative;
+  padding: 50px 0;
+
+  .blur-background {
+    background-image: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(255,253,60,.5) 35%, rgba(165,176,0,0.3) 100%), url("/img/69files/top.jpg");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    filter: blur(50px) saturate(130%);
+    position: absolute;
+    z-index: 1;
+  }
+
+  .container {
+    display: flex;
+    position: relative;
+    z-index: 3;
+  }
+
+  .info {
+    color: white;
+    width: 50%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .title {
+      width: 100%;
+      margin-bottom: 50px;
+      text-align: center;
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+
+      p {
+        padding: 15px;
+        font-size: .8rem;
+        font-weight: 300;
+      }
+    }
+
+    ul.singles {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 100px;
+
+      li {
+        font-size: 2rem;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    }
+
+    ul.logos {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+
+      li {
+        text-align: center;
+        img {
+          width: 50%;
+        }
+      }
+    }
+
+  }
+
+  .album-cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+    img {
+      width: 80%;
+    }
+  }
+}
+
+
+#tour-dates {
+  background: black;
+  position: relative;
+  z-index: 4;
+
+  .group-img{
+    background-image: url("/img/69files/group.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 300px;
+    filter: saturate(0%) contrast(120%);
+  }
+
+  .title {
+    padding: 60px 0;
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+  }
+
+  .dates {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: white;
+
+    li {
+      text-align: center;
+      padding: 5px 0;
+
+      .city {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+
+      .venue {
+        padding: 8px;
+      }
+
+      .date {
+        color: red;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+
+footer {
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  font-weight: 300;
+
+  img {
+    height: 30px;
+  }
+}
