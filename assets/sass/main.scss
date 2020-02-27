@@ -144,8 +144,8 @@ body {
     overflow: hidden;
     height: 300px;
     -webkit-box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.75);
-box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.75);
   }
 
 }
@@ -247,7 +247,7 @@ box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.75);
     background-repeat: no-repeat;
     background-position: center center;
     height: 300px;
-    filter: saturate(0%) contrast(120%);
+    filter: saturate(0%);
   }
 
   .title {
@@ -287,6 +287,7 @@ box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.75);
 
 
 footer {
+  padding: 10px;
   text-align: center;
   color: white;
   font-size: 12px;
@@ -294,5 +295,110 @@ footer {
 
   img {
     height: 30px;
+  }
+}
+
+
+// iphone
+@media screen and (max-width: 420px) {
+// background-color: lightblue;
+
+  #top-section {
+    header {
+      flex-direction: column;
+      align-items: center;
+      .logo {
+        margin-bottom: 10px;
+      }
+    }
+
+    .floating-img {
+      width: 300%;
+      left: -100%;
+    }
+  }
+
+  #bio {
+    padding: 20px;
+
+    .container {
+      flex-direction: column-reverse;
+      align-items: center;
+
+      .logo-centered {
+        display: none;
+      }
+
+      p {
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+  }
+
+  #latest {
+    padding: 20px 5px;
+
+    .title {
+      margin-bottom: 20px;
+    }
+
+    .videos {
+      left: 0;
+      grid-template-columns: 1fr;
+      padding: 0 20px;
+    }
+  }
+
+  #music {
+    padding: 20px 10px;
+
+    .container {
+      flex-direction: column;
+      align-items: space-between;
+
+      .title {
+        margin-bottom: 20px;
+      }
+
+      ul.singles {
+        margin-bottom: 30px;
+      }
+
+      ul.logos {
+        margin-bottom: 10px;
+      }
+
+      .info {
+        width: 100%;
+        order: 2;
+      }
+
+      .album-cover{
+        width: 100%;
+        order: 1;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  #tour-dates {
+    .group-img {
+      height: 200px;
+    }
+
+    .title {
+      padding:30px 0 0 0;
+    }
+
+    .dates {
+      grid-template-columns: 1fr 1fr;
+      padding: 0;
+
+      li {
+        padding: 5px 0;
+      }
+    }
   }
 }
